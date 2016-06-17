@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.InMemoryQueueTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-06-17T09:14:08" hostname="mothership.myob.myobcorp.net" time="0.018">
-  <properties/>
-  <testcase name="throws an exception if a message is pushed into an unknown queue" classname="com.example.InMemoryQueueTest" time="0.014"/>
-  <testcase name="correctly inserts a payload into a queue if the right url is given" classname="com.example.InMemoryQueueTest" time="0.004"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

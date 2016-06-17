@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.FileQueueTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-06-17T09:14:08" hostname="mothership.myob.myobcorp.net" time="0.301">
-  <properties/>
-  <testcase name="should allow pushing to a queue" classname="com.example.FileQueueTest" time="0.301"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
