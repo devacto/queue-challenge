@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.19">
+<file name="/Users/victor/dev/github/queue-challenge/src/main/java/com/example/FileQueueService.java">
+</file>
+<file name="/Users/victor/dev/github/queue-challenge/src/main/java/com/example/InMemoryQueueService.java">
+</file>
+<file name="/Users/victor/dev/github/queue-challenge/src/main/java/com/example/Message.java">
+</file>
+<file name="/Users/victor/dev/github/queue-challenge/src/main/java/com/example/QueueService.java">
+</file>
+<file name="/Users/victor/dev/github/queue-challenge/src/main/java/com/example/SqsQueueService.java">
+</file>
+</checkstyle>

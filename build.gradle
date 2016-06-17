@@ -1,0 +1,59 @@
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'checkstyle'
+apply plugin: 'codenarc'
+apply plugin: 'pmd'
+apply plugin: 'jacoco'
+apply plugin: 'findbugs'
+apply plugin: 'jacoco'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version = '1.0.0'
+
+dependencies {
+  compile 'com.google.guava:guava:19.0'
+  compile 'com.amazonaws:aws-java-sdk:1.10.65'
+  testCompile 'com.google.guava:guava-testlib:19.0'
+  testCompile 'org.codehaus.groovy:groovy-all:2.4.6'
+  testCompile 'junit:junit:4.1.2'
+  testCompile 'org.mockito:mockito-core:1.9.5'
+}
+
+jar {
+    baseName = 'queue-service'
+    version = version
+}
+
+checkstyle {
+    toolVersion = "6.19"
+}
+
+codenarc {
+    toolVersion = "0.25.2"
+}
+
+codenarcTest {
+    configFile = rootProject.file("config/codenarc/rulesetTest.groovy")
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    reports {
+        html.destination "${buildDir}/reports/jacoco"
+    }
+}
+
+defaultTasks 'clean', 'check'
