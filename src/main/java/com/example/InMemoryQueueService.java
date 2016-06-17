@@ -24,4 +24,14 @@ public class InMemoryQueueService implements QueueService {
 
   }
 
+  public Message pull(String queueUrl) throws IOException {
+    ArrayBlockingQueue<Message> queue = queueMap.get(queueUrl);
+
+    if (queue == null) {
+      throw new IOException(String.format("unknown queue %s", queueUrl));
+    }
+
+    return queue.peek();
+  }
+
 }
